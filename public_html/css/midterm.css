@@ -1,0 +1,351 @@
+/* General Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html,
+body {
+    width: 100%;
+    /*gets rid of viewport margin stuff*/
+}
+
+/* main tags */
+.position, h3, nav, .accent, footer p {
+    font-family: 'Inconsolata', monospace;
+}
+body {
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0px;
+    width: 100%;
+}
+
+main{
+    max-width: 960px;    
+    margin: 0 auto;
+    padding: 0px 10px;
+    margin-bottom: 70px;
+}
+
+p, div, ul {
+    line-height: 1.5rem;
+    color: #6c7075;
+    max-width: 700px;
+}
+
+.home-p{
+    color: #939DAA;
+}
+
+
+h1, h2{
+    padding: 20px 0px 10px 0px;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #0B132B;
+}
+
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #6c7075;
+    margin-bottom: 5px;
+}
+
+nav, .accent, footer p, .lab-card {
+    color: #77D9FC;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 960px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #77D9FC;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.nav-side{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+
+nav .nav-side a {
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+ul{
+    margin-left: 20px;
+}
+
+nav .nav-side a:visited, .lab-card:visited {
+    color: #77D9FC;
+}
+
+.active{
+    box-shadow: inset 0 0 0 4px #77D9FC;
+}
+
+nav .nav-side a:hover, .lab-card:hover {
+/*    credit to https://ianlunn.github.io/Hover/ */
+    box-shadow: inset 0 0 0 4px #77D9FC;
+    transition-duration: 0.3s;
+}
+
+nav .nav-side a:active, .lab-card:active{
+    color: #0B132B;    
+    background: #77D9FC;
+}
+
+
+footer {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: #0B132B;
+}
+
+form{
+    color: #0B132B;
+}
+
+form fieldset{
+    margin-top: 50px;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    display: flex;
+}
+
+.button-container{
+    flex-direction: row;
+}
+
+form fieldset button{
+    width: 25%;
+    padding: 10px;
+    margin: 0 auto;
+    min-width: 100px;
+}
+
+form fieldset legend{
+    font-weight: bold;
+}
+
+form fieldset input{
+/*    margin-right: 20px;*/
+}
+
+ 
+
+/* landing page classes */
+.flex-container-landing {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+}
+
+#landing-big-text {
+    font-size: 7rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.accent, h2 {
+    font-size: 1.5rem;
+}
+
+#logo{
+    width: 60px;
+    padding: 5px;
+}
+
+.dark-background {
+    background: #0B132B;
+}
+
+/* landing page classes end */
+
+/* about*/
+.flex-container{
+    display: flex;
+    max-width: 100%;
+    flex-direction: row;
+}
+
+#img-me{
+    width: 340px;
+    height: 210px;
+    padding-right: 20px;
+}
+
+#grid-container-resume{
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 40px;
+    grid-row-gap: 15px;
+    grid-template:
+        "edu edu cont"
+        "exp exp ."
+        "proj proj ."
+}
+
+.experience{
+    grid-area: exp;
+}
+
+.education{
+    grid-area: edu;
+}
+
+.projects{
+    grid-area: proj;
+}
+.contact{
+    grid-area: cont;
+}
+
+.title{
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #0B132B;
+    margin-top: 10px;
+}
+
+.border-left{
+    border-left: solid 4px #77D9FC;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* grid for labs*/
+
+
+#grid-container-lab{
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 3%;
+    grid-row-gap: 25px;
+}
+
+.lab-card{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background: #0B132B;
+    
+}
+
+@media only screen and (max-width: 768px){
+    #grid-container-lab{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-column-gap: 3%;
+        grid-row-gap: 25px;
+    }
+    #grid-container-resume{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template:
+            "cont"
+            "edu"
+            "exp"
+            "proj"
+    }
+    .flex-container{
+        flex-direction: column;
+    }
+    nav .nav-side a {
+        width: 100px;
+    }
+    
+    p{
+        padding-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 530px){
+    #landing-big-text {
+    font-size: 20vw;
+    font-weight: 900;
+    color: #ffffff;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #logo{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 320px){
+    #grid-container-lab{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-column-gap: 3%;
+        grid-row-gap: 25px;
+    }
+    
+    nav .nav-side a {
+        width: 80px;
+    }
+    
+    .flex-container{
+        flex-direction: column;
+    }
+    
+    #img-me{
+        width: 280px;
+        height: 170px;
+        padding-right: 20px;
+    }
+    
+    nav a {
+        width: 90px;
+    }
+    
+    
+}

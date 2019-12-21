@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 7</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:400,400i,900&display=swap" rel="stylesheet">
+    <link href="../../css/midterm.css" rel="stylesheet">
+    <!-- link stylesheet -->
+    <style>
+        footer{
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="dark-background">
+        <nav>
+            <a href="../../../index.html"><img src="../../images/rose.png" id="logo" alt="Rose home logo"></a>
+            <div class="nav-side">
+                <a href="../../index.html">Home</a>
+                <a href="../../about-me.html">About Me</a>
+                <a href="../index.html" class="active">Labs</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <form id="formData" onsubmit="event.preventDefault();">
+            <fieldset>
+                <legend>Lab 7: Javascript Mad Libs</legend>
+
+                <!--  -->
+                <label>Infinite verb: </label><input type="text" name="verb1"><br>
+                <label>Noun: </label><input type="text" name="noun1"><br>
+                <label>Noun: </label><input type="text" name="noun2"><br>
+                <label>Adjective: </label><input type="text" name="adj1"><br>
+                <label>Clothing item: </label><input type="text" name="cloth1"><br>
+                <label>Adjective: </label><input type="text" name="adj2"><br>
+                <label>Adjective: </label><input type="text" name="adj3"><br>
+                <label>Object: </label><input type="text" name="obj1"><br>
+                <label>Adjective: </label><input type="text" name="adj4"><br>
+                <label>Past tense verb: </label><input type="text" name="verb2"><br>
+                <label>Object: </label><input type="text" name="obj2"><br>
+                <label>Emoticon!: </label><input type="text" name="emo"><br>
+
+                <div class="button-container">
+                    <button id="submit">Submit</button>
+                    <button id="reset">Reset</button>
+                </div>
+
+            </fieldset>
+        </form>
+        <div id="content"></div>
+    </main>
+    <footer>
+        <p>&copy; Michelle Tai 2019</p>
+
+    </footer>
+
+    <script type="text/javascript">
+        // javascript goes here
+        function goMadLib() {
+            // function javascript goes
+            //            let formData = document.getElementById("formData");
+            //
+            //            let verb1 = formData.elements.namedItem("verb1").value;
+            //            let noun1 = formData.elements.namedItem("noun1").value;
+            //            let noun2 = formData.elements.namedItem("noun2").value;
+            //            let adj1 = formData.elements.namedItem("adj1").value;
+            //            let cloth1 = formData.elements.namedItem("cloth1").value;
+            //            let adj2 = formData.elements.namedItem("adj2").value;
+            //
+            //            let adj3 = formData.elements.namedItem("adj3").value;
+            //            let obj1 = formData.elements.namedItem("obj1").value;
+            //            let adj4 = formData.elements.namedItem("adj4").value;
+            //            let verb2 = formData.elements.namedItem("verb2").value;
+            //            let obj2 = formData.elements.namedItem("obj2").value;
+            //            let emo = formData.elements.namedItem("emo").value;
+
+
+            //            let newContent = "Sometimes, I just really want " + verb1 + ". ";
+            //            newContent += "Despite a cup of " + noun1 + " and a decent night of " + noun2 + ", I never wake up feeling " + adj1 + ".";
+            //            newContent += " Especially today. As I pulled on my " + cloth1 + ", ";
+            //            newContent += "I wished that I could stay in my " + adj2 + ", " + adj3 + " " + obj1 +
+            //                " instead of facing the " + adj4 + " cold outside. ";
+            //            newContent += "As I walked to class, I realized that I left my " + obj2 + " in my room and " + verb2 + " " + emo;
+
+            let arr = []; //will be size of 12
+            arr.push(formData.elements.namedItem("verb1").value);
+            arr.push(formData.elements.namedItem("noun1").value);
+            arr.push(formData.elements.namedItem("noun2").value);
+            arr.push(formData.elements.namedItem("adj1").value);
+            arr.push(formData.elements.namedItem("cloth1").value);
+            arr.push(formData.elements.namedItem("adj2").value);
+            arr.push(formData.elements.namedItem("adj3").value);
+            arr.push(formData.elements.namedItem("obj1").value);
+            arr.push(formData.elements.namedItem("adj4").value);
+            arr.push(formData.elements.namedItem("obj2").value);
+            arr.push(formData.elements.namedItem("verb2").value);
+            arr.push(formData.elements.namedItem("emo").value);
+
+            let newContent = "Sometimes, I just really want " + arr[0] + ". ";
+            newContent += "Despite a cup of " + arr[1] + " and a decent night of " + arr[2] + ", I never wake up feeling " + arr[3] + ".";
+            newContent += " Especially today. As I pulled on my " + arr[4] + ", ";
+            newContent += "I wished that I could stay in my " + arr[5] + ", " + arr[6] + " " + arr[7] +
+                " instead of facing the " + arr[8] + ", cold outside. ";
+            newContent += "As I walked to class, I realized that I left my " + arr[9] + " in my room and " + arr[10] + " " + arr[11];
+
+            document.getElementById("content").innerHTML = newContent;
+            console.log("madlibs created");
+        };
+
+        function myReset() {
+            let formData = document.getElementById("formData");
+            formData.elements.namedItem("verb1").value = "";
+            formData.elements.namedItem("noun1").value = "";
+            formData.elements.namedItem("noun2").value = "";
+            formData.elements.namedItem("adj1").value = "";
+            formData.elements.namedItem("cloth1").value = "";
+            formData.elements.namedItem("adj2").value = "";
+
+            formData.elements.namedItem("adj3").value = "";
+            formData.elements.namedItem("obj1").value = "";
+            formData.elements.namedItem("adj4").value = "";
+            formData.elements.namedItem("verb2").value = "";
+            formData.elements.namedItem("obj2").value = "";
+            formData.elements.namedItem("emo").value = "";
+
+            document.getElementById("content").innerHTML = "";
+        };
+
+        let submitBtn = document.getElementById("submit");
+        submitBtn.addEventListener('click', goMadLib);
+
+        let resetBtn = document.getElementById("reset");
+        resetBtn.addEventListener('click', myReset);
+    </script>
+</body></html>
+
+<!-- Sometimes, I just really want (infinitive verb). Despite a cup of (noun1) and a decent night of (noun2), I never wake up feeling (adjective1). Especially today. As I pulled on my (cloth), i wished that i could stay in my (adjective2), (adjective3) (obj1) instead of facing the (adjective4) outside. As I walked to class, I realized that I left my (obj2) in my room and (verb2) -->

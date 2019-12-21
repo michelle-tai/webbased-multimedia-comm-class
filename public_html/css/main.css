@@ -1,0 +1,88 @@
+*{
+/*
+    margin: 20px;
+    border: 1px solid #ff0000;
+*/
+    font-family: 'Libre Franklin', sans-serif;
+    
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+p{
+    font-size: 16pt;
+}
+
+body{
+    margin: 0vw 20vw;
+}
+
+footer{
+    vertical-align: bottom;
+    text-align: right;
+    position: absolute;
+    left: -10px;
+    bottom: 10px;
+    height: 30px;
+    width: 100%;
+    background-image: linear-gradient(to right, #daf2f5 , #e3befa); 
+    padding-top: 10px;
+    padding-right:10px;
+}
+
+.img1{
+    vertical-align: top;
+    width: 400px;
+}
+
+nav ul {
+    background-image: linear-gradient(to right, #daf2f5 , #e3befa); 
+    display: block;
+    list-style: none;
+    padding-inline-start:0px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a{
+    border: 2px solid #258994;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav ul li a:hover {
+    background-color: #258994;
+    color: #ffffff;
+}
+
+#section-left{
+    display:inline-block;
+    float:left;
+    width: 25vw;
+    padding: 0px 15px;
+    line-height: 30px;
+    vertical-align: top;
+    border: 5px solid #daf2f5;
+}
+
+#aside-right{
+     display:inline-block;
+    float: right;
+    width:25vw;
+    padding: 0px 15px;
+    line-height: 30px;
+    vertical-align: top;
+    border: 5px solid #e3befa;
+}

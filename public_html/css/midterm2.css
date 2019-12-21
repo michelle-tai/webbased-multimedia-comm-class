@@ -1,0 +1,112 @@
+
+/* typography rules */ 
+
+
+/* general rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/*    font-family: 'Libre Baskerville', serif;*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+html, body{
+    font-size: 17px;
+    width: 100%; /*gets rid of viewport margin stuff*/
+}
+
+body{
+    width: 960px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+    color: #6EB5C0;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #006c84;
+}
+
+img{
+    max-width: 100%; /*should not be bigger than parents width!*/
+}
+
+/*
+.grid-nav {
+    grid-area: nav;
+}
+*/
+
+.content {
+    grid-area: cont;
+}
+
+.footer {
+    grid-area: fter;
+    display: block;
+    background: #D6F7F4;
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding: 10px 0;
+
+}
+
+.flex-container{
+    display: flex;
+}
+
+.navigation {
+    grid-area: navi;
+    flex-direction: column;
+    align-items: flex-end;
+/*    position: fixed;*/
+    top: 15vh;
+    right: 78vw;
+    font-size: 1.5em;
+}
+
+nav{
+/*    border: 3px solid red;*/
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #6EB5C0;
+    height: 50px;
+    width: 100%;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+/*    border: 3px solid red;*/
+}
+
+
+#nav-links li{
+    padding: 1rem;
+}
+
+.navigation div{
+    text-align: end;
+/*            border-style: dashed;*/
+    margin: 4px 0px;
+}
+
+.grid-container-about-me {
+    display: grid;
+    grid-auto-rows: 100px 1fr 1fr 1fr;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "navi navi navi"
+        "cont cont ."
+        "cont cont ."
+        "cont cont .";
+
+}

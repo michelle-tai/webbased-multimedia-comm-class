@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge: Mad Libs</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            letter-spacing: 0.03em;
+            padding: 10px;
+            background: #fffbf2;
+        }
+
+        main {
+            text-align: center;
+            width: 60ch;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        h1,
+        p,
+        ul li,
+        h2,
+        button {
+            margin: 10px 0;
+        }
+
+        #story {
+            background: #eaeaea;
+            padding: 30px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            background: #000000;
+            color: #ffffff;
+            transition: 0.3s ease all;
+            padding: 10px 20px;
+            font-size: 1rem;
+            outline: 0;
+            box-shadow: none;
+            border: none;
+        }
+
+        button:hover,
+        button:focus {
+            color: #000000;
+            background: #eaeaea;
+        }
+
+        .mt-big {
+            margin-top: 3rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Mad Libs</h1>
+        <p>Write your own story by filling in the input fields below.</p>
+        <ul class="mt-big">
+            <li>Someone's Name: <input type="text" id="person"></li>
+            <li>Verb/Action (present): <input type="text" id="verb"></li>
+            <li>Noun 1 (singular): <input type="text" id="noun1"></li>
+            <li>Noun 2 (singular): <input type="text" id="noun2"></li>
+            <li>Adjective 1: <input type="text" id="adjective1"></li>
+            <li>Adjective 2: <input type="text" id="adjective2"></li>
+            <li>Adjective 3: <input type="text" id="adjective3"></li>
+        </ul>
+
+        <button id="lib-button">Make my madlib!</button>
+
+        <h2 class="mt-big">The story</h2>
+        <p id="story"></p>
+    </main>
+    <script>
+        // Create a madlib function
+        function madlibMaker() {
+            // Select all the form inputs and store their values into variables, 1x1
+            
+            var person = document.getElementById("person").value;
+            var verb = document.getElementById("verb").value;
+            var noun1 = document.getElementById("noun1").value;
+            var noun2 = document.getElementById("noun2").value;
+            var adj1 = document.getElementById("adjective1").value;
+            var adj2 = document.getElementById("adjective2").value;
+            var adj3 = document.getElementById("adjective3").value;
+            // Select the story holder - #story - and store it in a variable called storyDiv
+            var storyDiv = document.getElementById("story");
+
+            // Modify storyDiv innerHTML to create a string with your story, include "fixed text" and form input variables
+            storyDiv.innerHTML = "When " + person+ " doesn’t get enough " + noun1 +", they get " + adj1+ ". Sometimes, " +person+ " "  +verb+ " in class and wishes that they were in their " + adj2 + ", " + adj3 + " " + noun2 + ".";
+            // Write a console log for when the madlib is created, "I made a madlib!"
+            console.log("I made a madlib!");
+        };
+
+        // Select the button, and store it into a variable
+        var button = document.getElementById("lib-button");
+
+        // Create an eventlistener on the button, and run madlibMaker on click
+        button.addEventListener("click", madlibMaker);
+
+    </script>
+
+</body>
+
+</html>
